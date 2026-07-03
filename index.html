@@ -500,19 +500,19 @@
     .portrait-wrap::before {
       content: "";
       position: absolute;
-      inset: -3px;
+      inset: 0;
       border-radius: 30px;
       background: var(--gradient);
-      opacity: 0.85;
-      filter: blur(1px);
+      opacity: 0.5;
+      filter: blur(22px);
       z-index: -1;
-      animation: glowShift 6s ease-in-out infinite alternate;
+      animation: glowBreathe 5s ease-in-out infinite alternate;
     }
 
-    @keyframes glowShift {
+    @keyframes glowBreathe {
       to {
-        filter: blur(14px);
-        opacity: 0.55;
+        opacity: 0.75;
+        filter: blur(30px);
       }
     }
 
@@ -520,7 +520,8 @@
       width: 100%;
       border-radius: 28px;
       object-fit: cover;
-      aspect-ratio: 4/5;
+      aspect-ratio: 543/724;
+      object-position: center top;
       filter: saturate(1.05);
     }
 
@@ -1198,26 +1199,23 @@
       align-items: center;
       justify-content: center;
       gap: 8px;
-      animation: hexPulse 4.5s ease-in-out infinite;
+      filter: drop-shadow(0 0 26px rgba(61, 220, 132, 0.35));
     }
 
-    @keyframes hexPulse {
-      50% {
-        filter: brightness(1.18) saturate(1.1);
-      }
+    .hex-center img {
+      position: absolute;
+      inset: 0;
+      width: 100%;
+      height: 100%;
+      clip-path: inherit;
+      object-fit: cover;
+      object-position: center 15%;
     }
 
-    .hex-center ion-icon {
-      font-size: 72px;
-      color: #04120a;
-    }
-
-    .hex-center span {
-      font-family: var(--font-head);
-      font-size: 15px;
-      font-weight: 700;
-      letter-spacing: 4px;
-      color: #04120a;
+    .hex-in ion-icon {
+      font-size: 30px;
+      color: #e8ecf4;
+      flex-shrink: 0;
     }
 
     .hive-more {
@@ -1574,13 +1572,8 @@
         --hexc: 140px;
       }
 
-      .hex-center ion-icon {
-        font-size: 52px;
-      }
-
-      .hex-center span {
-        font-size: 12px;
-        letter-spacing: 3px;
+      .hex-in ion-icon {
+        font-size: 24px;
       }
     }
 
@@ -2033,8 +2026,7 @@
         </div>
 
         <div class="hex-center">
-          <ion-icon name="logo-android"></ion-icon>
-          <span>ANDROID</span>
+          <img src="images/main.jpeg" alt="Kamran Alam" />
         </div>
 
         <div class="hive">
@@ -2048,8 +2040,7 @@
                   alt="TensorFlow Lite"><span>TF Lite</span></div>
             </div>
             <div class="hex">
-              <div class="hex-in"><img src="https://cdn.simpleicons.org/openai/E8ECF4" alt="OpenAI"><span>OpenAI</span>
-              </div>
+              <div class="hex-in"><ion-icon name="sparkles"></ion-icon><span>OpenAI API</span></div>
             </div>
           </div>
           <div class="hive-row">
@@ -2223,6 +2214,15 @@
       });
     }, { rootMargin: "-45% 0px -50% 0px" });
     sections.forEach(s => spy.observe(s));
+
+    // ===== fallback if a tech logo fails to load =====
+    document.querySelectorAll(".hex-in img").forEach(img => {
+      img.addEventListener("error", () => {
+        const icon = document.createElement("ion-icon");
+        icon.setAttribute("name", "code-slash-outline");
+        img.replaceWith(icon);
+      });
+    });
 
     // ===== reveal on scroll (staggered in grids) =====
     document.querySelectorAll(".projects-grid, .skills-grid").forEach(g =>
