@@ -12,7 +12,7 @@ Personal portfolio of **Kamran Alam**, Senior Android Developer from Lahore, Pak
 
 ## Sections
 
-Home · About · Experience & Education · Projects (8 featured apps + Play Console links) · Skills · Contact
+Home · About · Experience & Education · Projects (11 featured apps) · Skills · Contact
 
 ## Run locally
 

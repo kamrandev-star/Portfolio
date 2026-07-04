@@ -877,193 +877,6 @@
       transform: translateX(5px);
     }
 
-    /* ===== Google Play developer profiles ===== */
-    .play-section {
-      margin-top: 64px;
-      background: linear-gradient(135deg, rgba(61, 220, 132, 0.06), rgba(34, 211, 238, 0.05));
-      border: 1px solid rgba(61, 220, 132, 0.16);
-      border-radius: 24px;
-      padding: 46px 44px;
-    }
-
-    .play-head {
-      display: flex;
-      flex-wrap: wrap;
-      align-items: flex-end;
-      justify-content: space-between;
-      gap: 22px;
-      margin-bottom: 30px;
-    }
-
-    .play-head h3 {
-      font-family: var(--font-head);
-      font-size: 25px;
-      letter-spacing: -0.3px;
-      margin-bottom: 8px;
-    }
-
-    .play-head h3 em {
-      font-style: normal;
-      background: var(--gradient);
-      -webkit-background-clip: text;
-      background-clip: text;
-      -webkit-text-fill-color: transparent;
-    }
-
-    .play-head p {
-      color: var(--muted);
-      font-size: 14.5px;
-      max-width: 520px;
-    }
-
-    .play-stats {
-      display: flex;
-      gap: 10px;
-      flex-wrap: wrap;
-    }
-
-    .play-stats span {
-      font-size: 12.5px;
-      font-weight: 600;
-      color: var(--text);
-      background: rgba(255, 255, 255, 0.05);
-      border: 1px solid var(--card-border);
-      padding: 7px 15px;
-      border-radius: 99px;
-      display: inline-flex;
-      align-items: center;
-      gap: 7px;
-    }
-
-    .play-stats ion-icon {
-      color: var(--accent);
-      font-size: 15px;
-    }
-
-    .play-cards {
-      display: grid;
-      grid-template-columns: repeat(auto-fit, minmax(290px, 1fr));
-      gap: 20px;
-    }
-
-    .play-card {
-      display: flex;
-      align-items: center;
-      gap: 20px;
-      background: #0b111c;
-      border: 1px solid rgba(255, 255, 255, 0.09);
-      border-radius: 18px;
-      padding: 24px 26px;
-      transition: 0.3s;
-      position: relative;
-      overflow: hidden;
-    }
-
-    .play-card::after {
-      content: "";
-      position: absolute;
-      inset: 0;
-      background: radial-gradient(420px 120px at 90% 110%, rgba(61, 220, 132, 0.12), transparent 70%);
-      opacity: 0;
-      transition: 0.35s;
-    }
-
-    .play-card:hover {
-      transform: translateY(-5px);
-      border-color: rgba(61, 220, 132, 0.45);
-      box-shadow: 0 16px 38px rgba(0, 0, 0, 0.45);
-    }
-
-    .play-card:hover::after {
-      opacity: 1;
-    }
-
-    .play-logo-tile {
-      width: 58px;
-      height: 58px;
-      flex-shrink: 0;
-      border-radius: 15px;
-      display: grid;
-      place-items: center;
-      background: linear-gradient(150deg, #1b2434, #0a0f1a);
-      border: 1px solid rgba(255, 255, 255, 0.1);
-      box-shadow: inset 0 1px 0 rgba(255, 255, 255, 0.08);
-    }
-
-    .play-logo-tile svg {
-      width: 26px;
-      height: 28px;
-    }
-
-    .play-card-text {
-      flex-grow: 1;
-      min-width: 0;
-    }
-
-    .pc-small {
-      display: block;
-      font-size: 10.5px;
-      font-weight: 700;
-      letter-spacing: 2px;
-      text-transform: uppercase;
-      color: var(--muted);
-      margin-bottom: 4px;
-    }
-
-    .pc-big {
-      display: block;
-      font-family: var(--font-head);
-      font-size: 18.5px;
-      font-weight: 600;
-      color: var(--text);
-      line-height: 1.25;
-    }
-
-    .pc-sub {
-      display: flex;
-      align-items: center;
-      gap: 6px;
-      font-size: 12.5px;
-      color: var(--accent);
-      font-weight: 500;
-      margin-top: 5px;
-    }
-
-    .pc-sub ion-icon {
-      font-size: 13px;
-    }
-
-    .play-card>ion-icon {
-      font-size: 20px;
-      color: var(--muted);
-      flex-shrink: 0;
-      transition: 0.3s;
-    }
-
-    .play-card:hover>ion-icon {
-      color: var(--accent);
-      transform: translate(3px, -3px);
-    }
-
-    /* shine sweep across play cards */
-    .play-card::before {
-      content: "";
-      position: absolute;
-      top: 0;
-      bottom: 0;
-      left: -70%;
-      width: 45%;
-      background: linear-gradient(100deg, transparent, rgba(255, 255, 255, 0.09), transparent);
-      transform: skewX(-18deg);
-      transition: left 0.65s ease;
-      pointer-events: none;
-      z-index: 1;
-    }
-
-    .play-card:hover::before {
-      left: 125%;
-    }
-
     /* ============ EXTRA MOTION ============ */
     .progress-bar {
       position: fixed;
@@ -1485,10 +1298,6 @@
         gap: 60px;
       }
 
-      .play-cards {
-        grid-template-columns: 1fr;
-      }
-
       .hive-wrap {
         flex-direction: column;
         gap: 40px;
@@ -1544,10 +1353,6 @@
 
       .form-row {
         grid-template-columns: 1fr;
-      }
-
-      .play-section {
-        padding: 32px 24px;
       }
 
       .float-chip {
@@ -1905,75 +1710,52 @@
           <a href="https://play.google.com/store/apps/details?id=com.abl.invitation.card.maker" target="_blank"
             rel="noopener" class="project-link">View on Play Store <ion-icon name="arrow-forward-outline"></ion-icon></a>
         </article>
+
+        <!-- 9 Voice Language Translator -->
+        <article class="project reveal" style="--pgrad: linear-gradient(135deg,#38bdf8,#8b5cf6)">
+          <div class="project-top">
+            <div class="project-icon"><ion-icon name="mic-outline"></ion-icon></div>
+            <span class="project-cat">Tools</span>
+          </div>
+          <h3>Voice Language Translator</h3>
+          <p>Speak and translate instantly — real-time voice-to-voice translation with text and conversation modes,
+            built for fast, natural communication across languages.</p>
+          <div class="project-tags"><span>Voice Translation</span><span>Real-Time</span><span>Multi-Language</span>
+          </div>
+          <a href="https://play.google.com/store/apps/details?id=com.ax.ge.language.translator" target="_blank"
+            rel="noopener" class="project-link">View on Play Store <ion-icon name="arrow-forward-outline"></ion-icon></a>
+        </article>
+
+        <!-- 10 Smarty Men Photo Editor -->
+        <article class="project reveal" style="--pgrad: linear-gradient(135deg,#f472b6,#8b5cf6)">
+          <div class="project-top">
+            <div class="project-icon"><ion-icon name="shirt-outline"></ion-icon></div>
+            <span class="project-cat">Photography</span>
+          </div>
+          <h3>Smarty Men Photo Editor</h3>
+          <p>Style men's portraits in seconds — smart suit changer, hairstyles, beards and accessories with clean
+            edge detection for sharp, professional results.</p>
+          <div class="project-tags"><span>Suit Changer</span><span>Hairstyles</span><span>Smart Editing</span></div>
+          <a href="https://play.google.com/store/apps/details?id=com.ge.photo.id.smarty.editor" target="_blank"
+            rel="noopener" class="project-link">View on Play Store <ion-icon name="arrow-forward-outline"></ion-icon></a>
+        </article>
+
+        <!-- 11 Passport Photo & ID Maker -->
+        <article class="project reveal" style="--pgrad: linear-gradient(135deg,#2dd4bf,#0ea5e9)">
+          <div class="project-top">
+            <div class="project-icon"><ion-icon name="id-card-outline"></ion-icon></div>
+            <span class="project-cat">Utilities</span>
+          </div>
+          <h3>Passport Photo & ID Maker</h3>
+          <p>Create compliant passport, visa and ID photos in seconds — correct sizes for any country, background
+            cleanup and print-ready photo sheets.</p>
+          <div class="project-tags"><span>ID Photos</span><span>Auto Resize</span><span>Print Ready</span></div>
+          <a href="https://play.google.com/store/apps/details?id=com.quickphoto.editorpro.collagemaker.enhancer"
+            target="_blank" rel="noopener" class="project-link">View on Play Store
+            <ion-icon name="arrow-forward-outline"></ion-icon></a>
+        </article>
       </div>
 
-      <div class="play-section reveal">
-        <div class="play-head">
-          <div>
-            <h3>…and 30+ more, live on <em>Google Play</em></h3>
-            <p>Logo Maker, Voice Changer, Copy My Data and many other creative, utility and lifestyle apps —
-              published across two developer accounts.</p>
-          </div>
-          <div class="play-stats">
-            <span><ion-icon name="apps-outline"></ion-icon> 40+ Published Apps</span>
-            <span><ion-icon name="download-outline"></ion-icon> Millions of Installs</span>
-            <span><ion-icon name="shield-checkmark-outline"></ion-icon> 3 Dev Accounts</span>
-          </div>
-        </div>
-        <div class="play-cards">
-          <a class="play-card" href="https://play.google.com/store/apps/dev?id=5659298684953405740" target="_blank"
-            rel="noopener">
-            <div class="play-logo-tile">
-              <svg viewBox="0 0 100 110" xmlns="http://www.w3.org/2000/svg" aria-hidden="true">
-                <polygon points="14,4 14,106 60,55" fill="#00C3FF" />
-                <polygon points="14,4 60,55 78,38" fill="#3DDC84" />
-                <polygon points="14,106 60,55 78,72" fill="#FF3A44" />
-                <polygon points="60,55 78,38 96,55 78,72" fill="#FFC107" />
-              </svg>
-            </div>
-            <div class="play-card-text">
-              <span class="pc-small">Google Play · Developer Profile</span>
-              <span class="pc-big">Appbotics Lab</span>
-              <span class="pc-sub"><ion-icon name="checkmark-circle"></ion-icon> Keep Yourself Up-to-Date</span>
-            </div>
-            <ion-icon name="open-outline"></ion-icon>
-          </a>
-          <a class="play-card" href="https://play.google.com/store/apps/dev?id=8844332064835599582&hl=en"
-            target="_blank" rel="noopener">
-            <div class="play-logo-tile">
-              <svg viewBox="0 0 100 110" xmlns="http://www.w3.org/2000/svg" aria-hidden="true">
-                <polygon points="14,4 14,106 60,55" fill="#00C3FF" />
-                <polygon points="14,4 60,55 78,38" fill="#3DDC84" />
-                <polygon points="14,106 60,55 78,72" fill="#FF3A44" />
-                <polygon points="60,55 78,38 96,55 78,72" fill="#FFC107" />
-              </svg>
-            </div>
-            <div class="play-card-text">
-              <span class="pc-small">Google Play · Developer Profile</span>
-              <span class="pc-big">H-Tech Labs</span>
-              <span class="pc-sub"><ion-icon name="checkmark-circle"></ion-icon> Innovate, Integrate & Elevate</span>
-            </div>
-            <ion-icon name="open-outline"></ion-icon>
-          </a>
-          <a class="play-card" href="https://play.google.com/store/apps/developer?id=Appifx+Studio+LLC"
-            target="_blank" rel="noopener">
-            <div class="play-logo-tile">
-              <svg viewBox="0 0 100 110" xmlns="http://www.w3.org/2000/svg" aria-hidden="true">
-                <polygon points="14,4 14,106 60,55" fill="#00C3FF" />
-                <polygon points="14,4 60,55 78,38" fill="#3DDC84" />
-                <polygon points="14,106 60,55 78,72" fill="#FF3A44" />
-                <polygon points="60,55 78,38 96,55 78,72" fill="#FFC107" />
-              </svg>
-            </div>
-            <div class="play-card-text">
-              <span class="pc-small">Google Play · Developer Profile</span>
-              <span class="pc-big">Appifx Studio LLC</span>
-              <span class="pc-sub"><ion-icon name="checkmark-circle"></ion-icon> Photo, ID & translator apps</span>
-            </div>
-            <ion-icon name="open-outline"></ion-icon>
-          </a>
-        </div>
-      </div>
     </div>
   </section>
 
